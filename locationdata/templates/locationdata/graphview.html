@@ -1,0 +1,132 @@
+
+{% extends "businesslocation/base.html" %}
+{%load staticfiles %}
+{% block content %}
+
+<script type="text/javascript">
+	alert('started script started');
+
+	var zip_code = '{{zip_code}}';
+	var county = '{{county}}';
+	var state = '{{state}}';
+
+	var pop_male_county = '{{pop_male_county}}';
+	var pop_female_county = '{{pop_female_county}}';
+	var pop_male = '{{pop_male}}';
+	var pop_female = '{{pop_female}}';
+	var pop_label = '{{ pop_label|safe }}';
+	var college = '{{college}}';
+	var college_county = '{{college_county}}';
+	
+	var income = '{{ income|safe }}';
+	var income_county = '{{ income_county|safe }}';
+	var income_label = '{{ income_label|safe }}';
+	
+
+	var business_name = '{{business_name|safe }}';
+	var business_amount = '{{business_amount}}';
+	var business_name_county = '{{business_county_name|safe }}';
+	var business_amount_county = '{{business_county_amount}}';
+	
+	var population ='{{population}}';
+	var non_movers = '{{non_movers}}';
+	var from_diff_county ='{{from_diff_county}}';
+	var from_diff_state='{{from_diff_state}}';
+	var from_diff_abroad='{{from_diff_abroad}}';
+	var to_county='{{to_county}}';
+	var to_state='{{to_state}}';
+	
+ alert('script ended');
+</script>
+
+
+<div class="locaction_">
+	<h1>Location</h1>
+	<ol id="location_css">
+		<li>
+			<div>
+				<h2>State</h2>
+				<p>{{state}}</p>
+			</div>
+		</li>
+		<li>
+			<div>
+				<h2>County</h2>
+				<p>{{county}}</p>
+			</div>
+		</li>
+		<li>
+			<div>
+				<h2>City</h2>
+				<p>{{city}}</p>
+			</div>
+		</li>
+		<li>
+			<div>
+				<h2>Zip code</h2>
+				<p>{{zip_code}}</p>
+			</div>
+		</li>
+	</ol>
+</div>
+
+
+<div>
+	<div>
+		<h2>Population Range:{{zip_code}}</h2>
+		<canvas id="pop_can" width="400" height="400"></canvas>
+	</div>
+
+	<div>
+		<h2>Income: {{zip_code}}</h2>
+		<canvas id="income_can" width="400" height="400"></canvas>
+	</div>
+	<div>
+		<h2> Places of Employment: {{zip_code}}</h2>
+		<canvas id="jobs_can" width="400" height="400"></canvas>
+	</div>
+</div>
+
+
+
+
+<!-- county metrics -->
+<!-- county metrics -->
+<!-- county metrics -->
+
+<div>
+	<h1>County</h1>
+	<h1>Stats</h1>
+		<div>
+			<div>
+				<h2>Population Range: {{county}}</h2>
+				<canvas id="pop_can_county" width="400px" height="400"></canvas>
+			</div>
+
+			<div>
+				<h2>Income: {{county}}</h2>
+				<canvas id="income_can_county" width="400px" height="400"></canvas>
+			</div>
+		<div>
+		
+		<h2> Places of Employment: {{county}}</h2>
+		<canvas id="jobs_can_county" width="400px" height="400"></canvas>
+
+		</div>
+		
+	</div>
+
+	<h1>Change in population for :{{county}} </h1>
+</div>
+
+
+
+
+
+
+<script type="text/javascript" src="{% static 'javascript/graphview.js' %}"></script>
+<style type="text/css" src="{% static 'javascript/graphview.css' %}"></style>
+
+
+{% endblock %}
+

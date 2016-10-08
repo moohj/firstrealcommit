@@ -1,0 +1,33 @@
+{% extends "businesslocation/base.html" %}
+{%load staticfiles %}
+
+{% block content %}
+<div>
+	<div>
+		<h2 class="text_head">Understand Location: Beta</h2>
+		<p class="text_">
+			The first phase of the project is in beta testing now. 
+			Enter a location (state, city and zipcode) to find out the current demographics and the look of potential customers in that area.
+		</p> 
+	</div>
+
+
+	<div>
+		<h2 class="text_head">Current Customers: In Production</h2>
+		<p class="text_">
+			An app that helps you  measure current customers, compare them to potential customers, and predict what your day to day operations may look like.  
+		</p>
+	</div>
+
+
+	<div>
+		<h2 class="text_head">Direct Connect: Coming Soon</h2>
+		<p class="text_">
+			Connect direcly with the customers who have either shown an interest, or are most likely to visit your business.
+		</p>
+	</div>
+
+
+</div>
+<link rel="stylesheet" type="text/css" href="{% static 'css/infopages.css' %}">
+{% endblock %}
