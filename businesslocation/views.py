@@ -14,6 +14,7 @@ def index(request):
 	"form":form["form"],
 	"error":form["error"],
 	"contactform":contactform,
+	"url_base":'http://www.epicwednesday.com/',
 	}
 	return render(request,'businesslocation/index.html', context)
 
