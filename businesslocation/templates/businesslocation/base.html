@@ -59,8 +59,9 @@
         </div>
         <div class="modal-body">
           <form method="POST">
-            {% csrf_token %}
+           
             {{form.as_p}}
+             {% csrf_token %}
         </div>
         <div class="modal-footer">
           <input type="submit" class="btn btn-primary" value="Join">
