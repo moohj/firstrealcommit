@@ -10,9 +10,8 @@
 from django.shortcuts import render
 from businesslocation.forms import BusinesSignUpForm
 from businesslocation.views import signupmodal
-from connectMail.forms import ContactForm
-from .models import DataMine
-from .forms import DataMineForm
+# from .models import DataMine
+# from .forms import DataMineForm
 import requests
 import json
 
@@ -98,7 +97,6 @@ def populatedatamine(request, zip_code,city,state):
 	key = '6f93579624a8c9851357cb40588746a6423c1252'
 	# forms
 	# forms
-	contactform = ContactForm()
 	form = signupmodal(request)
 	#data population
 	#data population
@@ -119,7 +117,6 @@ def populatedatamine(request, zip_code,city,state):
 
 	
 	context = {
-	"contactform" : contactform,
 	"form" : form["form"],
 	"error" : form["error"],
 	'zip_code' : zip_code,

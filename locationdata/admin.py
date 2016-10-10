@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import DataMine
+# from .models import DataMine
 # Register your models here.
-admin.site.register(DataMine)
+# admin.site.register(DataMine)

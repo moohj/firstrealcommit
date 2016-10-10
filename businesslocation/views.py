@@ -1,19 +1,18 @@
 from django.shortcuts import render
 from .models import BusinesSignUp
 from .forms import BusinesSignUpForm
-from connectMail.forms import ContactForm
+
 import requests
 import json
 
 # Create your views here.
 def index(request):
 	print(request.method)
-	contactform = ContactForm()
+
 	form = signupmodal(request)
 	context = {
 	"form":form["form"],
 	"error":form["error"],
-	"contactform":contactform,
 	"url_base":'http://www.epicwednesday.com/',
 	}
 	return render(request,'businesslocation/index.html', context)

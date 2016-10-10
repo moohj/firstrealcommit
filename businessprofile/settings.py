@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'se5w5!@tzjfjz&gzs*9bl8+qb+1o*%au)#bs$158q*d&nag!qq'
 # SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
 ".epicwednesday.com"
@@ -149,7 +149,7 @@ MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_cdn")
 # security??
 SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_BROWSER_XSS_FILTER = True
-CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = False
 CSRF_COOKIE_HTTPONLY = True
 X_FRAME_OPTIONS = "DENY"
 
