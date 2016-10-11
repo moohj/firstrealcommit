@@ -1,0 +1,151 @@
+{%load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!--chart js-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.bundle.min.js"></script>
+	<title>Epic Wednesday</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+	<script
+			  src="https://code.jquery.com/jquery-3.1.0.min.js"
+			  integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+			  crossorigin="anonymous"></script>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+{# Page Header #}
+{# Page Header #}
+{# Page Header #}
+
+    <div class="container ">
+      <div class="page-header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+           <li role="presentation"><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#modalSignup">JOIN</button></li>
+        </nav>
+        <h3 class="text-muted"><a href="https://www.EpicWednesday.com">Epic Wednesday</a></h3>
+      </div>
+
+      {% block content %}{% endblock %}
+
+
+{# modal for mailing list #}
+{# modal for mailing list #}
+{# modal for mailing list #}
+
+
+  
+<div class="container">
+  <!-- Modal -->
+  <div class="modal fade" id="modalSignup" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Join</h4>
+        </div>
+        <div class="modal-body">
+          
+           <form method="POST">{% csrf_token %}
+            {{form.as_p}}
+                   
+            </div>
+        <div class="modal-footer">
+          <input type="submit" class="btn btn-primary" value="Join">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          </form>
+
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+
+{# footer start #}
+{# footer start #}
+{# footer start #}
+<div>
+  <footer class="footer">
+    <div class="page-header"></div>
+    <div class="col-sm-4" id="contact_" >
+      <ul style="list-style-type:none"  >
+      		<li><h4 class="footerHead" style="text-align: center">Connect With Us</h4></li>
+
+          <li> 
+            <p style="text-align: center"><a href="https://www.facebook.com/EpicWednesday/">FaceBook</a></p>
+            <p></p>
+          </li>
+
+          <li>
+            <p style="text-align: center"><a href="https://www.instagram.com/epicwednesday/">Instagram</a></p>
+            <p></p>
+          </li>
+
+           <li><p style="text-align: center">
+           E-Mail us directly: contact@EpicWednesday.com
+           </p>
+           </li>
+
+          </ul>
+      	</ul>
+    </div>
+    	
+  	<div class="col-sm-4" id="about_">
+    	<ul style="list-style-type:none">
+    		<li><h4 class="footerHead" style="text-align: center"> About Us</h4></li>
+
+    		<li class="footerTxt"><p style="text-align: center"><span class="glyphicon glyphicon-wrench"></span> <a href="{{ url_base }}what_we_do">What We Do </a>   </p></li>
+    		<li class="footerTxt"><p style="text-align: center"><span class="glyphicon glyphicon-user"></span><a href="{{ url_base }}who_we_are"> Who We Are </a>   </p></li>
+
+    		</ul>
+	  </div>
+    	
+    <div class="col-sm-4" id="comingsoon_" >
+    	<ul style="list-style-type:none">
+
+    		<li class="footerTxt"><h4 class="footerHead"  style="text-align: center">Coming Soon</h4></li>
+    		<li class="footerTxt"><p style="text-align: center"><span class="glyphicon glyphicon-stats"></span> <a href="{{ url_base }}for_business">For Business</a> </p></li>
+    		<li class="footerTxt"><p style="text-align: center"><span class="glyphicon glyphicon-glass"></span> <a href="{{ url_base }}for_bar_goers">For Bar Goers</a> </p></li>
+
+    	</ul>
+    </div>
+
+  </footer>
+</div>
+
+
+ 
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        
+  </div>
+  <div class="page-header"></div><div><p style="text-align: center;">&copy; 2016 Epic Wednesday</p></div>
+</body>
+
+
+
+
+<style type="text/css" src="{% static 'css/base.css' %}"></style>
+
+
+
+<script type="text/javascript" src="{% static 'javascript/base.js' %}"></script>
+
+</html>

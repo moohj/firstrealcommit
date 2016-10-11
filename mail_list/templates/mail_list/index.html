@@ -1,0 +1,94 @@
+{% extends "mail_list/base.html" %}
+{%load staticfiles %}
+
+{% block content %}
+{# location form #}
+{# location form #}
+{# location form #}
+<div class="jumbotron" >
+	<div class="container" >
+		<div >
+			<h1 class="text-center">Know Your Customer</h1>
+			<p></p>
+		</div>
+			<div>
+				<div class="form-group col-sm-3" >
+					<label id="index_City_label">City:</label>
+					<input  class="form-control"  placeholder="Enter City" id="index_City">
+				</div>
+
+				<div class="form-group col-sm-3" >
+					<label id="index_State_label">State:</label>
+					<input class="form-control"  placeholder="Enter State" id="index_State" maxlength="2">
+				</div>
+
+				<div class="form-group col-sm-3" >
+					<label id="index_Zip_label">ZipCode:</label>
+					<input  class="form-control"  placeholder="Enter Zip" id="index_ZipCode" maxlength="5">
+				</div>
+
+	  			<div class="form-group col-sm-3"  id="div_submit">
+	  				<label id="index_State_label"> Submit:</label><br>
+					<input onclick="validateForm()" type="submit" value="Submit" class="btn btn-default " id="index_submit" ></button>
+				</div>
+			</div>
+
+	</div>
+		<div class="alert alert-danger" id="error_message">
+    		Error in Zip Input
+  		</div>
+</div>
+
+{# updates/blogstuff #}
+{# updates/blogstuff #}
+{# updates/blogstuff #}
+<div>
+	<div>
+		<h2>For Businesses:</h2>
+		<ul style="list-style-type:none">
+			<li>
+				<p>
+				View demographics of your current or future location
+				</p>
+			</li>
+			<li>
+				<p>
+				 Understand Your customers, by knowing their makeup
+				</p>
+			</li>
+			<li>
+				<p>
+				Understand segments that can be capitalized upon 
+				</p>
+			</li>
+			<li>
+				<p>
+				Join Maling list to be first to have access to new parts of site, and app 
+				</p>
+			</li>
+		</ul> 
+	</div>
+	<div>
+		<h2>For Bar Goers:</h2>
+		<ul style="list-style-type:none">
+			<li>
+				<p>
+				Our main product for Bar and restaurant goers is soon to come
+				</p>
+			</li>
+			<li>
+				<p>
+				 Join Maling list to be first to have access to app
+				</p>
+			</li>
+		</ul> 
+	
+	</div>
+
+
+</div>
+
+
+<script type="text/javascript" src="{% static 'javascript/index.js'  %}"></script>
+
+{% endblock %}
