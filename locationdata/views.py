@@ -8,8 +8,8 @@
 # ensure message and signup work correctly 
 
 from django.shortcuts import render
-from businesslocation.forms import BusinesSignUpForm
-from businesslocation.views import signupmodal
+from mail_list.forms import MailListSignUpForm
+from mail_list.views import signupmodal
 # from .models import DataMine
 # from .forms import DataMineForm
 import requests

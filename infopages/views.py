@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from businesslocation.forms import BusinesSignUpForm
-from businesslocation.views import signupmodal
+from mail_list.forms import MailListSignUpForm
+from mail_list.views import signupmodal
 
 
 # Create your views here.

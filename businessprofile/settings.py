@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'businesslocation',
+    'mail_list',
     'locationdata',
     'infopages',
     
@@ -154,5 +154,5 @@ CSRF_COOKIE_HTTPONLY = True
 X_FRAME_OPTIONS = "DENY"
 
 ADMINS =[
-('Mujo', 'muammarj@gmail.com'),
+('Muammarj', 'muammarj@gmail.com'),
 ]

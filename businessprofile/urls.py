@@ -20,7 +20,7 @@ from django.contrib import admin
 
 
 urlpatterns = [
-	url(r'',include('businesslocation.urls')),
+	url(r'',include('mail_list.urls')),
 	url(r'graph/',include('locationdata.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'',include('infopages.urls')),
